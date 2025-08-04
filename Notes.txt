@@ -1,0 +1,22 @@
+constants:
+that cannot be changed throught the code
+syntax:
+const roll = 113
+
+varibles:
+that can be changed througout the code
+syntax:
+1. let name = "Monojit"
+2. var name = "Monojit"
+Prefer not to use var because of issue in block scope and functional scope.
+
+Comments:
+1. // Comments
+2. /* Comments */
+
+Print statement:
+1. console.log()
+2. console.table([abc, def, ghi])  - it will print all variables or constants and their value in table format.
+
+# if you declare any variable and leave it without assigning any value js will assume it as undefined.
+
