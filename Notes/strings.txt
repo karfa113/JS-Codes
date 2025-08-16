@@ -1,0 +1,15 @@
+# Creating strings: Strings can be created as primitives, from string literals, or as objects, using the String() constructor:
+
+let string1 = "Hello, World!";
+let string2 = new String("Hello, World!");
+
+# Character Access: There are two ways to access an individual character in a string. 
+
+The first is the charAt() method:
+"cat".charAt(1); // gives value "a"
+
+The other way is to treat the string as an array-like object, where individual characters correspond to a numerical index:
+
+"cat"[1]; // also gives value "a"
+
+# Comparing Strings: Strings can be compared using the comparison operators (==, ===, !=, !==, >, <, etc.). When comparing strings, the comparison is based on the Unicode values of the characters in the strings.
