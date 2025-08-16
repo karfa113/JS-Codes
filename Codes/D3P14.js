@@ -14,6 +14,14 @@ function loginMessage(username){
     return `Welcome, ${username}!`;
 }
 
-console.log(
-    loginMessage("Monojit")
-);
+// console.log(loginMessage("Monojit"));
+
+function totalPrice(...num){ // rest parameter
+    let result = 0
+    for(i=0; i<num.length; i++){
+        result += num[i];
+    }
+    return result
+}
+
+console.log(`Total price: ${totalPrice(100, 200, 300, 400, 500, 600)}`);
