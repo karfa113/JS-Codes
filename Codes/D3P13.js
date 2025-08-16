@@ -8,3 +8,6 @@ console.log(merged); // { a: 1, b: 3, c: 4 }
 console.log(Object.keys(obj1));
 console.log(Object.values(obj1));
 console.log(Object.entries(obj1));
+
+const {a: newA} = obj1; // destructuring of object
+console.log(newA);
