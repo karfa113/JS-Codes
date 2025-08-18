@@ -5,6 +5,7 @@ const add = (x, y) => {
 }
 
 const subtract = (x, y) => x - y // Implicit return 
+// const subtract = (x, y) => (x-y) this works same as the above
 
 // console.log(add(669, 96))
 
