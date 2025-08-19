@@ -7,3 +7,7 @@
 (() => {
     console.log(`DB Two CONNECTED`);
 })();
+    
+    ((name) => {
+        console.log(`Hello ! ${name}`);
+    })('Monojit');
