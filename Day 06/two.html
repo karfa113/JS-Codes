@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<style>
+    *{
+        background-color: #212121;
+        color: #fff;
+    }
+</style>
+<body>
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    // Creating an element
+    function addlang(lang){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(lang))
+        document.querySelector('.language').appendChild(li)
+    }
+
+    addlang("Python")
+    addlang("C++")
+
+    // Editing an element
+    const secondLang = document.querySelector('li:nth-child(2)')
+    const newLi = document.createElement('li')
+    newLi.innerHTML = "MonoDB"
+    secondLang.replaceWith(newLi)
+
+    // Deleteing
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+</script>
+</html>
