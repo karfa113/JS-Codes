@@ -1,33 +1,117 @@
-html {
+html, body {
   margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  transition: background 0.4s;
 }
 
-span {
-  display: block;
-}
 .canvas {
-  margin: 100px auto 100px;
-  width: 80%;
+  margin: 80px auto;
+  width: 420px;
+  background: rgba(255,255,255,0.96);
+  border-radius: 22px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
   text-align: center;
+  padding: 44px 28px 36px 28px;
+  position: relative;
+}
+
+h1 {
+  font-size: 2.3rem;
+  color: #3a3a3a;
+  margin-bottom: 32px;
+  letter-spacing: 1.5px;
+  text-shadow: 0 2px 8px #e0eafc;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.15rem;
+  color: #555;
+  margin-top: 36px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
 }
 
 .button {
-  width: 100px;
-  height: 100px;
-  border: solid black 2px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #e0eafc;
   display: inline-block;
+  margin: 0 18px;
+  box-shadow: 0 2px 12px #cfdef3;
+  cursor: pointer;
+  transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+  position: relative;
+  outline: none;
+}
+
+.button:focus {
+  border-color: #2193b0;
+}
+
+.button:hover {
+  transform: scale(1.12);
+  box-shadow: 0 6px 24px #b3c6e0;
+  border-color: #3a3a3a;
 }
 
 #grey {
-  background: grey;
+  background: linear-gradient(135deg, #bdbdbd 0%, #757575 100%);
 }
 
 #white {
-  background: white;
+  background: linear-gradient(135deg, #fff 0%, #f7f7f7 100%);
+  border: 3px solid #bbb;
 }
+
 #blue {
-  background: blue;
+  background: linear-gradient(135deg, #2193b0 0%, #6dd5ed 100%);
 }
+
 #yellow {
-  background: yellow;
+  background: linear-gradient(135deg, #fceabb 0%, #f8b500 100%);
+}
+
+.button::after {
+  content: attr(id);
+  position: absolute;
+  bottom: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1rem;
+  color: #3a3a3a;
+  background: rgba(255,255,255,0.8);
+  padding: 2px 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #e0eafc;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  pointer-events: none;
+}
+
+@media (max-width: 600px) {
+  .canvas {
+    width: 98%;
+    padding: 18px 6px 18px 6px;
+  }
+  .button {
+    width: 60px;
+    height: 60px;
+    margin: 0 8px;
+  }
+  h1 {
+    font-size: 1.3rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  .button::after {
+    font-size: 0.85rem;
+    bottom: -22px;
+    padding: 2px 8px;
+  }
 }
